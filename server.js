@@ -8,8 +8,8 @@ application.use(express.static('./'));
 application.use(express.urlencoded({ extended: true }));
 application.use(express.json());
 
-// require("./apiroutes")(application);
-// require("./htmlroutes")(application);
+require("./routes/apiroutes")(application);
+require("./routes/htmlroutes")(application);
 
 application.listen(PORT, () => {
     console.log("Listening on PORT: " + PORT);
