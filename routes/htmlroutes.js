@@ -6,7 +6,6 @@ module.exports = function (application) {
         res.sendFile(path.join(__dirname, "../public/notes.html"));
     });
 
-    //GET * will return the index.html file
     application.get("*", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
