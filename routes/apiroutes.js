@@ -24,19 +24,19 @@ module.exports = function(application) {
                 notesss[i].id = i
             }
             console.log(notesss);
-        });
-        
-        fs.writeFile("./db/db.json",
+            
+            fs.writeFile("./db/db.json",
             JSON.stringify(notesss),
             function(err, data){
                 if (err) {
                     console.log(err);
                 } else {
-                    res.json(JSON.parse(data));
+                    res.send(notesss);
                 }
             }
-        )
-        
+            )
+            
+        });
     });
 
     
